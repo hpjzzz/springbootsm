@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.itsource.ssm.mapper.EmployeeMapper" >
+    <insert id="add" parameterType="cn.itsource.ssm.domain.Employee" >
+        INSERT INTO employee (id, name, psw
+        )
+        VALUES  (#{id}, #{name}, #{psw})
+
+    </insert>
+
+    <select id="findOne" resultType="Employee" parameterType="java.lang.Long">
+        select id,name,psw
+        from
+        t_employee
+        where id=#{id}
+
+    </select>
+</mapper>
